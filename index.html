@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Emosi</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 flex items-center justify-center p-4">
+
+  <!-- Splash Screen -->
+  <section id="splash" class="text-center bg-white bg-opacity-20 backdrop-blur-md rounded-2xl p-8 shadow-lg fade-in">
+    <div class="flex justify-center mb-6">
+      <img src="https://cdn.pixabay.com/photo/2018/01/14/22/59/cartoon-3082809_1280.png" alt="Quiz Icon" class="w-18 h-12 mr-2">
+      <h1 class="text-5xl font-extrabold text-white drop-shadow-lg">Tebak Emosi</h1>
+    </div>
+    <button id="btn-start" class="animate-pulse px-8 py-3 bg-white bg-opacity-80 text-indigo-700 font-semibold rounded-full shadow-md hover:scale-105 transition duration-200 inline-flex items-center">
+      <img src="https://cdn-icons-png.freepik.com/512/6612/6612880.png" alt="Start Icon" class="w-6 h-6 mr-2">Mulai Quiz
+    </button>
+  </section>
+
+  <!-- Quiz Screen -->
+  <section id="quiz" class="hidden w-full max-w-xl bg-white rounded-2xl p-6 shadow-2xl fade-in">
+    <div class="flex justify-between mb-4 text-lg font-medium text-gray-700">
+      <span>Ronde <span id="round">1</span>/10</span>
+      <span>Skor: <span id="score">0</span></span>
+    </div>
+    <p id="sentence" class="text-2xl text-center text-indigo-600 mb-6 text-opacity-90"></p>
+    <div id="choices" class="grid grid-cols-2 gap-4"></div>
+    <button id="btn-next" class="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-full shadow hover:scale-105 transition duration-200 hidden inline-flex items-center">
+      <!-- <img src="https://www.svgrepo.com/show/331312/arrow-right.svg" alt="Next Icon" class="w-5 h-5 mr-2">Lanjut -->
+      <img src="https://cdn-icons-png.freepik.com/512/6612/6612880.png" alt="Start Icon" class="w-6 h-6 mr-2">Lanjut
+    </button>
+  </section>
+
+  <!-- Result Screen -->
+  <section id="result" class="hidden text-center bg-white rounded-2xl p-8 shadow-lg fade-in">
+    <div id="result-icon" class="flex justify-center mb-4"></div>
+    <h2 id="result-message" class="text-4xl font-bold text-indigo-700 mb-4"></h2>
+    <p class="text-xl mb-6">Skor akhir Anda: <span id="final-score" class="font-semibold"></span>/10</p>
+    <button id="btn-restart" class="px-8 py-3 bg-indigo-500 text-white rounded-full shadow-md hover:bg-indigo-600 transition duration-200 inline-flex items-center">
+      <!-- <img src="https://www.svgrepo.com/show/331297/reload.svg" alt="Reload Icon" class="w-6 h-6 mr-2">Main Lagi -->
+      <img src="https://cdn-icons-png.freepik.com/512/6612/6612880.png" alt="Start Icon" class="w-6 h-6 mr-2">Main Lagi
+    </button>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
