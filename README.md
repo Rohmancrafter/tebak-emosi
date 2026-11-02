@@ -33,27 +33,6 @@ Tebak Emosi adalah mini‑game berbasis web yang menantang pemain untuk menebak 
 4. **Responsive Design**: mobile & desktop.
 
 
-##  Cara Setup & Deploy
-
-1. **Clone Repository**
-
-   ```bash
-   git clone https://github.com/username/tebak-emosi.git
-   cd tebak-emosi
-   ```
-2. **Buka Secara Lokal**
-
-   * Jalankan Live Server di VS Code, atau:
-
-     ```bash
-     python -m http.server 8000
-     open http://localhost:8000
-     ```
-3. **Deploy**
-
-   * **Netlify**: Connect repo → Deploy → dapatkan `<name>.netlify.app`.
-
-
 ##  AI Support Explanation
 
 Selama pengembangan, saya memanfaatkan **ChatGPT** untuk mempercepat berbagai tahap:
